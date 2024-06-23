@@ -13,7 +13,7 @@ return new class extends Migration
             $table->string('title');
             $table->mediumText('description');
             $table->string('thumbnail_url');
-            $table->string('repository_link');
+            $table->string('link')->nullable()->comment('A link to the project portfolio or page');
             $table->json('languages');
             $table->string('year');
         });
