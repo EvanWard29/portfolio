@@ -146,7 +146,9 @@
                                         <!-- Portfolio Modal - Image-->
                                         <img class="img-fluid rounded mb-5" src="{{ asset($project->thumbnail_url) }}" alt="..." />
                                         <!-- Portfolio Modal - Description-->
-                                        <p class="mb-4">{{ $project->description }}</p>
+                                        <div class="text-start">
+                                            {!! $project->description !!}
+                                        </div>
                                         <button class="btn btn-primary" data-bs-dismiss="modal">
                                             <i class="fas fa-xmark fa-fw"></i>
                                             Close Window
