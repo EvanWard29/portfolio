@@ -1,9 +1,10 @@
 <?php
 
+use App\Http\Middleware\OnceBasicAuthMiddleware;
 use App\Models\Project;
 use Illuminate\Support\Facades\Route;
 
-Route::group(['prefix' => 'projects'], function () {
+Route::group(['prefix' => 'projects', 'middleware' => OnceBasicAuthMiddleware::class], function () {
     // List projects
     Route::get('', function () {
         return Project::all();
