@@ -29,7 +29,7 @@ Route::group(['prefix' => 'projects', 'middleware' => OnceBasicAuthMiddleware::c
 
         $project->update($validated);
 
-        return to_route('project', ['project' => $projectId]);
+        return to_route('project', ['project_id' => $projectId]);
     });
 
     // Delete a project
