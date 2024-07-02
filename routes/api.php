@@ -16,12 +16,20 @@ Route::group(['prefix' => 'projects', 'middleware' => OnceBasicAuthMiddleware::c
     });
 
     // Update a project
-    Route::put('{project_id}', function (int $projectId) {
+    Route::put('{project_id}', function (string $projectId) {
         $project = Project::findOrFail($projectId);
 
-        $project->update(request()->input());
+        $validated = request()->validate([
+            'title' => ['string'],
+            'description' => ['string'],
+            'languages' => ['array'],
+            'languages.*' => ['string'],
+            'link' => ['url'],
+        ]);
 
-        return $project;
+        $project->update($validated);
+
+        return to_route('project', ['project' => $projectId]);
     });
 
     // Delete a project
