@@ -1,7 +1,7 @@
 <html lang="en">
     <head>
         <title>Evan Ward - {{ $project->title }}</title>
-        <link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
+        @vite(['resources/css/app.scss'])
     </head>
     <body>
         <div class="container">
