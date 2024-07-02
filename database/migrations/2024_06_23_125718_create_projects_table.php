@@ -9,11 +9,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('projects', function (Blueprint $table) {
-            $table->id();
+            $table->string('id', 50)->primary();
             $table->string('title');
             $table->mediumText('description');
-            $table->string('thumbnail_url');
-            $table->string('link')->nullable()->comment('A link to the project portfolio or page');
+            $table->string('link')->nullable()->comment('A link to the project repository or page');
             $table->json('languages');
             $table->string('year');
         });
