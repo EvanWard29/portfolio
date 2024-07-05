@@ -12,7 +12,7 @@ return new class extends Migration
             $table->string('id', 50)->primary();
             $table->string('title');
             $table->mediumText('description');
-            $table->string('link')->nullable()->comment('A link to the project repository or page');
+            $table->json('links')->nullable()->comment('Relevant project links');
             $table->json('languages');
             $table->string('year');
         });

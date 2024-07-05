@@ -24,7 +24,8 @@ Route::group(['prefix' => 'projects', 'middleware' => OnceBasicAuthMiddleware::c
             'description' => ['string'],
             'languages' => ['array'],
             'languages.*' => ['string'],
-            'link' => ['url'],
+            'links' => ['array'],
+            'links.*' => ['url'],
         ]);
 
         $project->update($validated);
