@@ -34,7 +34,7 @@ Route::group(['prefix' => 'projects', 'middleware' => OnceBasicAuthMiddleware::c
     });
 
     // Delete a project
-    Route::delete('{project_id}', function (int $projectId) {
+    Route::delete('{project_id}', function (string $projectId) {
         Project::findOrFail($projectId)->delete();
 
         return response()->json();
