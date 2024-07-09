@@ -29,6 +29,7 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Portfolio</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#skills">Skills</a> </li>
                     </ul>
                 </div>
             </div>
@@ -118,6 +119,79 @@
                         <i class="fas fa-download me-2"></i>
                         View CV
                     </a>
+                </div>
+            </div>
+        </section>
+        <!-- Skills Section-->
+        <section class="page-section" id="skills">
+            <div class="container">
+                <!-- Skills Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary">Skills</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Skills Section Content-->
+                <div class="row align-items-md-stretch">
+                    <!-- Languages-->
+                    <div class="col" id="languages">
+                       <div class="card h-100">
+                           <div class="card-body">
+                               <h3 class="card-title text-secondary">Languages</h3>
+                               @foreach($languages->sortByDesc('name') as $language)
+                                   <div class="row justify-content-between align-items-center">
+                                       <div class="col text-start">
+                                           <p class="mb-1 lead">{{ $language->name }}</p>
+                                       </div>
+                                       <div class="col text-end lead">
+                                           <p class="mb-1 text-muted">{{ $language->percent }}%</p>
+                                       </div>
+                                   </div>
+                                   <div class="progress mb-4">
+                                       <div class="progress-bar" role="progressbar" style="width: {{ $language->percent }}%" aria-valuenow="{{ $language->percent }}" aria-valuemin="0" aria-valuemax="100"></div>
+                                   </div>
+                               @endforeach
+                           </div>
+                       </div>
+                    </div>
+                    <div class="d-lg-none w-100 mb-4"></div>
+                    <!-- Qualities -->
+                    <div class="col" id="qualities">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-secondary">Qualities</h3>
+                                        <ul class="lead h-100">
+                                            <li class="mb-auto">Strong independent worker.</li>
+                                            <li class="mb-auto">Excellent organisation.</li>
+                                            <li class="mb-auto">Good time management.</li>
+                                            <li class="mb-auto">Excellent problem solver.</li>
+                                            <li class="mb-auto">Dedicated team worker.</li>
+                                            <li class="mb-auto">Active listener.</li>
+                                            <li class="mb-auto">Quick learner.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-100 mb-4"></div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-secondary">Technical Skills</h3>
+                                        <ul class="lead h-100">
+                                            <li class="mb-2">Excellent understanding of working in Laravel versions 5.4-10x.</li>
+                                            <li class="mb-2">8+ years of experience in programming.</li>
+                                            <li class="mb-2">4+ years of experience working with PHP, MySQL, JavaScript, and HTML/CSS.</li>
+                                            <li class="mb-2">2:1 Bachelors Degree in Computer Science.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
