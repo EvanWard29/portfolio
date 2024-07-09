@@ -197,7 +197,7 @@
         </section>
         <!-- Copyright Section-->
         <div class="copyright py-4 text-center text-white">
-            <div class="container"><small>Copyright &copy; Evan Ward 2024</small></div>
+            <div class="container"><small>Copyright &copy; Evan Ward {{now('Europe/London')->year}}</small></div>
         </div>
         <!-- Portfolio Modals-->
         @foreach($projects as $project)
