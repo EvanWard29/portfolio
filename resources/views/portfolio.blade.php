@@ -140,10 +140,10 @@
                        <div class="card h-100">
                            <div class="card-body">
                                <h3 class="card-title text-secondary">Languages</h3>
-                               @foreach($languages->sortByDesc('name') as $language)
+                               @foreach($skills->where('type', \App\Enums\SkillType::Language) as $language)
                                    <div class="row justify-content-between align-items-center">
                                        <div class="col text-start">
-                                           <p class="mb-1 lead">{{ $language->name }}</p>
+                                           <p class="mb-1 lead">{{ $language->description }}</p>
                                        </div>
                                        <div class="col text-end lead">
                                            <p class="mb-1 text-muted">{{ $language->percent }}%</p>
@@ -165,13 +165,9 @@
                                     <div class="card-body">
                                         <h3 class="card-title text-secondary">Qualities</h3>
                                         <ul class="lead h-100">
-                                            <li class="mb-auto">Strong independent worker.</li>
-                                            <li class="mb-auto">Excellent organisation.</li>
-                                            <li class="mb-auto">Good time management.</li>
-                                            <li class="mb-auto">Excellent problem solver.</li>
-                                            <li class="mb-auto">Dedicated team worker.</li>
-                                            <li class="mb-auto">Active listener.</li>
-                                            <li class="mb-auto">Quick learner.</li>
+                                            @foreach($skills->where('type', \App\Enums\SkillType::Quality) as $quality)
+                                                <li class="mb-2">{{ $quality->description }}</li>
+                                            @endforeach
                                         </ul>
                                     </div>
                                 </div>
@@ -182,10 +178,9 @@
                                     <div class="card-body">
                                         <h3 class="card-title text-secondary">Technical Skills</h3>
                                         <ul class="lead h-100">
-                                            <li class="mb-2">Excellent understanding of working in Laravel versions 5.4-10x.</li>
-                                            <li class="mb-2">8+ years of experience in programming.</li>
-                                            <li class="mb-2">4+ years of experience working with PHP, MySQL, JavaScript, and HTML/CSS.</li>
-                                            <li class="mb-2">2:1 Bachelors Degree in Computer Science.</li>
+                                            @foreach($skills->where('type', \App\Enums\SkillType::Technical) as $technical)
+                                                <li class="mb-2">{{ $technical->description }}</li>
+                                            @endforeach
                                         </ul>
                                     </div>
                                 </div>
