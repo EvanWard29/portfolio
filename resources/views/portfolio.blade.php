@@ -115,7 +115,7 @@
                 </div>
                 <!-- About Section Button-->
                 <div class="text-center mt-4">
-                    <a class="btn btn-xl btn-outline-light" href="{{ asset('assets/cv.pdf') }}" target="_blank">
+                    <a class="btn btn-xl btn-outline-light" href="{{ asset('assets/Evan_Ward-CV.pdf') }}" target="_blank">
                         <i class="fas fa-download me-2"></i>
                         View CV
                     </a>
