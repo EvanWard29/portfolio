@@ -38,7 +38,7 @@
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
                 <!-- Masthead Avatar Image-->
-                <img class="img-fluid mb-5 rounded" src="{{ asset('assets/img/profile.webp') }}" alt="..." />
+                <img class="mb-5 rounded-circle" width="320px" height="320px" src="{{ asset('assets/img/profile.webp') }}" alt="..." />
                 <!-- Masthead Heading-->
                 <h1 class="masthead-heading text-uppercase mb-0">Evan Ward</h1>
                 <!-- Icon Divider-->
