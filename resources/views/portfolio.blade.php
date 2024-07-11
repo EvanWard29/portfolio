@@ -38,7 +38,7 @@
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
                 <!-- Masthead Avatar Image-->
-                <img class="img-fluid mb-5 rounded" src="{{ asset('assets/img/profile.jpeg') }}" alt="..." />
+                <img class="img-fluid mb-5 rounded" src="{{ asset('assets/img/profile.webp') }}" alt="..." />
                 <!-- Masthead Heading-->
                 <h1 class="masthead-heading text-uppercase mb-0">Evan Ward</h1>
                 <!-- Icon Divider-->
@@ -87,7 +87,7 @@
                                 <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid img-thumbnail" src="assets/img/portfolio/{{ $project->id }}/thumbnail.png" alt="..." />
+                                <img class="img-fluid img-thumbnail" src="assets/img/portfolio/{{ $project->id }}/thumbnail.webp" alt="{{ $project->id }}" width="900px" height="650" />
                             </div>
                         </div>
                     @endforeach
@@ -213,7 +213,7 @@
                                             <div class="divider-custom-line"></div>
                                         </div>
                                         <!-- Portfolio Modal - Image-->
-                                        <img class="img" src="assets/img/portfolio/{{ $project->id }}/thumbnail.png" alt="..." />
+                                        <img class="img" src="assets/img/portfolio/{{ $project->id }}/thumbnail.webp" alt="..." />
                                         @if(!is_null($project->links))
                                             @foreach($project->links as $link)
                                                 @php $link = str($link); @endphp
