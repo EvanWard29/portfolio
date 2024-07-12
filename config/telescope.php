@@ -92,7 +92,7 @@ return [
     */
 
     'middleware' => [
-        'web',
+        \App\Http\Middleware\OnceBasicAuthMiddleware::class,
         Authorize::class,
     ],
 
