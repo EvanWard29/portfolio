@@ -10,7 +10,8 @@ export default defineConfig({
         }),
         purge({
             templates: ['blade'],
-            paths: ['resources/views/*']
+            paths: ['resources/views/*'],
+            safelist: ['img']
         }),
     ],
     server: {
