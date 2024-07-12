@@ -11053,18 +11053,6 @@ html {
     @extend .mb-3;
 }
 
-@media only screen and (min-width: 480px) {
-    .img-float-start {
-        width: 50%;
-        float: left !important;
-    }
-
-    .img-float-end {
-        width: 50%;
-        float: right !important;
-    }
-}
-
 .svg-star {
     display: inline-block;
     height: 1em;
