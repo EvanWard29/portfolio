@@ -7,6 +7,11 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
+    // Always return DB results for local env
+    if (app()->isLocal()) {
+        return view('portfolio', ['projects' => Project::all(), 'skills' => Skill::all()]);
+    }
+
     $projects = Cache::rememberForever('projects', function () {
         return Project::all();
     });
